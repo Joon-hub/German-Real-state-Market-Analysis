@@ -35,7 +35,7 @@ German Real Estate Market Analysis/
 
 **Data Source**: [Kaggle Dataset - Apartment Rental Offers in Germany](https://www.kaggle.com/datasets/corrieaar/apartment-rental-offers-in-germany)
 
-> **Note:** Due to size limitations, the large data files are not included in the repository.
+> **Note:** the large data files are not included in the repository due to size limitations.
 
 ### Technologies Used
 - **Python**
@@ -58,6 +58,4 @@ German Real Estate Market Analysis/
    ```python
    python app.py
    ```
-   ```python
-   pip install -r requirements.txt
-   ```
+ 
