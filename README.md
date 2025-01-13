@@ -1,29 +1,50 @@
 # German Real Estate Market Analysis
 
-## Overview
-A comprehensive analysis of the German real estate market focusing on price trends, regional variations, and key market indicators. This project utilizes data visualization and statistical analysis to provide insights into Germany's housing market dynamics.
+## Dataset Overview
 
-## Project Structure
+- The dataset, sourced from Kaggle, is 232 MB in size and focuses on analyzing the German real estate market
+- It was created by scraping data from the immoscout24.de rental website, collected across four time periods between 2018 and 2020
+
+## Repository Structure
+
+### Data Folder
+- `immo_data.csv` (original dataset, 232 MB, too large for GitHub's 100 MB upload limit)
+- `plz_wohner.csv`: Merged with immo_data.csv to calculate the number of residents per zip code  
+- `zuordnung_plz_ort.csv`: Maps postal codes (PLZ) to specific cities and states
+
+### Data Processing Workflow
+
+#### Raw Data Cleaning
+The cleaning process starts with three input files: `immo_data.csv`, `plz_wohner.csv`, and `zuordnung_plz_ort.csv`. Using `Data_cleaning.ipynb`, these files are cleaned and merged to create `cleaned_data.csv`.
+
+#### Exploratory Data Analysis (EDA)
+The `EDA.ipynb` notebook analyzes `cleaned_data.csv` using functions from `eda_helper_functions.py`. The analysis results are saved in `eda_data.csv` with new analytical features.
+
+#### Dashboard Creation 
+Interactive visualizations are created in `plotly_dashboard.ipynb` using a 1000-row sample from `eda_data.csv` due to computational constraints. The resulting dashboard provides insights into German real estate market trends through a representative subset of the data. While not using the full dataset, this sampling approach allows for efficient visualization while maintaining meaningful pattern analysis.
+
+#### Feature Engineering
+The `feature_engineering.ipynb` notebook processes `eda_data.csv` to create new features. The output `preprocessed_data.csv` contains data ready for machine learning.
+
+#### Model Training
+Finally, `ModelTraining.ipynb` uses `preprocessed_data.csv` to train prediction models. The trained model is saved as `model.pkl` for real estate price predictions.
+
 ```python
 German Real Estate Market Analysis/
-├── Data/ # Data directory
-│ └── [data files] # CSV files for analysis
+├── Data/ 
 ├── GeoJSON/ # Geographic data files
-│ └── [geojson files] # GeoJSON files for mapping
-├── Notebooks/ # Analysis notebooks
-│ ├── pycache/ # Python cache files
-│ ├── dashboard1.py # Dashboard implementation
+├── Notebooks/ 
 │ ├── Data_cleaning.ipynb # Data preprocessing notebook
 │ ├── eda_helper_functions.py # Helper functions for EDA
 │ ├── EDA.ipynb # Exploratory Data Analysis
 │ ├── FeatureEngineering.ipynb # Feature creation and selection
 │ ├── ModelTraining.ipynb # Model development notebook
 │ └── plotly_dashboard.ipynb # Interactive visualization dashboard
-└── Python files/ # Python scripts
-├── .gitignore # Git ignore configurations
-├── app.py # Main application file
-├── model_training.log # Training logs
-└── requirements.txt # Project dependencies
+├── .gitignore 
+├── app.py 
+├── model_training.log
+├── model.pkl
+└── requirements.txt 
 ```
 
 ### Features
