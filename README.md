@@ -47,13 +47,6 @@ German Real Estate Market Analysis/
 └── requirements.txt 
 ```
 
-### Features
-- Interactive visualization dashboard using Plotly
-- Comprehensive analysis of real estate prices across German regions
-- Price prediction models
-- Market trend analysis
-- Regional comparison tools
-
 **Data Source**: [Kaggle Dataset - Apartment Rental Offers in Germany](https://www.kaggle.com/datasets/corrieaar/apartment-rental-offers-in-germany)
 
 > **Note:** the large data files are not included in the repository due to size limitations.
