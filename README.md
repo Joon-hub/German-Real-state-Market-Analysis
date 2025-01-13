@@ -47,7 +47,10 @@ German Real Estate Market Analysis/
 ## Setup and Installation
 
 1. Clone this repository
-2. install dependencies
+   ```python
+   git clone https://github.com/Joon-hub/German-Real-state-Market-Analysis.git
+   ```
+3. install dependencies
    ```python
    pip install -r requirements.txt
    ```
